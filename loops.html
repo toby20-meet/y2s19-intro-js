@@ -3,6 +3,8 @@
 
 <head>
     <title>JavaScript Guessing Game</title>
+        <meta charset="UTF-8">
+
 </head>
 
 <body>
@@ -13,8 +15,19 @@
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
-
+var answer ="";
+var c =0;
 var randomInt = getRandomInt(1, 100);
+while(answer != randomInt){
+	answer = prompt("Guess num between 1 - 100")
+	parseInt(answer);
+	if(answer>randomInt)
+		alert("Guess lower");
+	if(answer<randomInt)
+		alert("Guess higher");
+	c++;
+	}
+alert("congratulations! it took you" + c + "guesses")
 /* END STARTING CODE */
 
 // your code goes under here

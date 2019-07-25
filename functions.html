@@ -3,6 +3,7 @@
 
 <head>
     <title>JavaScript Functions</title>
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -13,6 +14,36 @@
 function isLetter(char) {
     char = char.toLowerCase();
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
+}
+function isPalindrome(word){
+	var x,y;
+	var neu = "";
+	var old = "";
+	for(x=0;x<word.length;x++){
+		if(isLetter(word[x])){
+			neu = word[x]+neu;
+		}
+	}
+	for(y=0;y<word.length;y++){
+		if(isLetter(word[y])){
+			old = old+word[y];
+		}
+	}
+	if(old == neu){
+		return true;
+	}
+	if(old != neu){
+		return false;
+	}
+
+}
+var answer = prompt("Enter a sentence")
+if (isPalindrome(answer)) {
+	alert("This is a palindrom")
+
+}
+else{
+	alert("This is not a palindrome")
 }
 
 // Write your isPalindrome function here!

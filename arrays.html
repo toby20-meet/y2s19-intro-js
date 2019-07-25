@@ -10,6 +10,10 @@
 
     <script>
 // your code goes here
+	var list = prompt("three things you are excited about for meet{separate with ,}")
+	list = list.split(", ")
+	list.sort()
+	document.write(Array.join(list))
     </script>
 </body>
 
